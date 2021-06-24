@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 
 project(OpenGl_Breakout)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
 # config glfw
 option(GLFW_BUILD_DOCS OFF)
