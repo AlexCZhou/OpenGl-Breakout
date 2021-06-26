@@ -5,6 +5,10 @@
 
 #include <GLFW/glfw3.h>
 
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
+
 // Represents the current state of the game
 enum GameState {
     GAME_ACTIVE,
@@ -31,6 +35,13 @@ public:
     void ProcessInput(float dt);
     void Update(float dt);
     void Render();
+    void ImguiInit(GLFWwindow* window);
+
+private:
+    // imgui
+    
+    void ImguiUpdate();
+    void ImguiRander();
 };
 
 #endif

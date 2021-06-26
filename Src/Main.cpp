@@ -2,8 +2,9 @@
 
 #include <GLFW/glfw3.h>
 
-#include "Game.hpp"
-#include "ResourceManager.hpp"
+#include "Game.h"
+#include "ResourceManager.h"
+
 
 #include <iostream>
 
@@ -52,6 +53,9 @@ int main(int argc, char *argv[])
     // initialize game
     // ---------------
     Breakout.Init();
+    Breakout.ImguiInit(window);
+
+    
 
     // deltaTime variables
     // -------------------
@@ -60,6 +64,7 @@ int main(int argc, char *argv[])
 
     while (!glfwWindowShouldClose(window))
     {
+        
         // calculate delta time
         // --------------------
         float currentFrame = glfwGetTime();
@@ -81,6 +86,8 @@ int main(int argc, char *argv[])
         glClear(GL_COLOR_BUFFER_BIT);
         Breakout.Render();
 
+
+        
         glfwSwapBuffers(window);
     }
 
