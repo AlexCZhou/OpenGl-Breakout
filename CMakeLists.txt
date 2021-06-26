@@ -23,12 +23,13 @@ include_directories(Dependence/glad/include)
 include_directories(Dependence/glm)
 
 
-file(GLOB SOURCES "Src/*.cpp" ${GLAD_SRC})
+file(GLOB SOURCES "Src/*.cpp" "Src/imgui/*.cpp" ${GLAD_SRC})
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 target_include_directories(OpenGl_Breakout 
     PRIVATE
         ${PROJECT_SOURCE_DIR}/Include
+        ${PROJECT_SOURCE_DIR}/Include/imgui
 )
 target_link_libraries(OpenGl_Breakout ${LIBS})
